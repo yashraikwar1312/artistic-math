@@ -60,11 +60,30 @@ def analyze_image(img: Image, dict_of_vars: dict):
     )
     response = model.generate_content([prompt, img])
     print(response.text)
+    
+    # Clean the response text by removing markdown code blocks if present
+    response_text = response.text.strip()
+    if response_text.startswith('```json'):
+        response_text = response_text[7:]  # Remove ```json
+    if response_text.startswith('```'):
+        response_text = response_text[3:]  # Remove ```
+    if response_text.endswith('```'):
+        response_text = response_text[:-3]  # Remove ending ```
+    response_text = response_text.strip()
+    
     answers = []
     try:
-        answers = ast.literal_eval(response.text)
-    except Exception as e:
-        print(f"Error in parsing response from Gemini API: {e}")
+        # First try parsing as JSON
+        answers = json.loads(response_text)
+    except json.JSONDecodeError:
+        try:
+            # If JSON fails, try ast.literal_eval
+            answers = ast.literal_eval(response_text)
+        except Exception as e:
+            print(f"Error in parsing response from Gemini API: {e}")
+            print(f"Response text: {response_text}")
+            # Return a default response if parsing fails
+            answers = [{"expr": "Unable to parse the image", "result": "Please try again with a clearer image"}]
     print('returned answer ', answers)
     for answer in answers:
         if 'assign' in answer:

@@ -13,8 +13,8 @@ async def run(data: ImageData):
     image_bytes = BytesIO(image_data)
     image = Image.open(image_bytes)
     responses = analyze_image(image, dict_of_vars=data.dict_of_vars)
-    data = []
+    result_data = []
     for response in responses:
-        data.append(response)
-    print('response in route: ', response)
-    return {"message": "Image processed", "data": data, "status": "success"}
+        result_data.append(response)
+    print('responses in route: ', responses)
+    return {"message": "Image processed", "data": result_data, "status": "success"}
