@@ -146,26 +146,37 @@ export default function Home() {
         const canvas = canvasRef.current;
     
         if (canvas) {
-            const response = await axios({
-                method: 'post',
-                url: `${import.meta.env.VITE_API_URL}/calculate`,
-                data: {
-                    image: canvas.toDataURL('image/png'),
-                    dict_of_vars: dictOfVars
-                }
-            });
+            try {
+                const response = await axios({
+                    method: 'post',
+                    url: `${import.meta.env.VITE_API_URL}/calculate`,
+                    data: {
+                        image: canvas.toDataURL('image/png'),
+                        dict_of_vars: dictOfVars
+                    }
+                });
 
-            const resp = await response.data;
-            console.log('Response', resp);
-            resp.data.forEach((data: Response) => {
-                if (data.assign === true) {
-                    // dict_of_vars[resp.result] = resp.answer;
-                    setDictOfVars({
-                        ...dictOfVars,
-                        [data.expr]: data.result
+                const resp = response.data;
+                console.log('Response', resp);
+                
+                if (resp.status === 'success' && resp.data) {
+                    resp.data.forEach((data: Response) => {
+                        if (data.assign === true) {
+                            setDictOfVars({
+                                ...dictOfVars,
+                                [data.expr]: data.result
+                            });
+                        }
                     });
                 }
-            });
+            } catch (error) {
+                console.error('Error calling API:', error);
+                setResult({
+                    expression: 'Error',
+                    answer: 'Unable to process. Please check your connection and try again.'
+                });
+                return;
+            }
             const ctx = canvas.getContext('2d');
             const imageData = ctx!.getImageData(0, 0, canvas.width, canvas.height);
             let minX = canvas.width, minY = canvas.height, maxX = 0, maxY = 0;
