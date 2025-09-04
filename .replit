@@ -52,7 +52,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd calc-be && python main.py"
+args = "cd calc-be && GEMINI_API_KEY=\"AIzaSyB-GXcyPzOWmVBSO80b2b5JKLNPBsUu5wM\" python main.py"
 waitForPort = 8000
 
 [workflows.workflow.metadata]
