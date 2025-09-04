@@ -1,0 +1,26 @@
+Warning: findDOMNode is deprecated in StrictMode. findDOMNode was passed an instance of DraggableCore which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node
+    at div
+    at DraggableCore (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-draggable.js?v=a4f86fdb:1360:9)
+    at Draggable (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-draggable.js?v=a4f86fdb:1792:9)
+    at Home (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/src/screens/home/index.tsx?t=1756987588377:26:21)
+    at RenderedRoute (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=3da31700:4034:5)
+    at RenderErrorBoundary (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=3da31700:3994:5)
+    at DataRoutes (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=3da31700:5153:5)
+    at Router (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=3da31700:4416:15)
+    at RouterProvider (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=3da31700:4968:5)
+    at MantineThemeProvider (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/@mantine_core.js?v=1caedbc2:3114:3)
+    at MantineProvider (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/@mantine_core.js?v=1caedbc2:3613:3)
+    at App
+Warning: findDOMNode is deprecated in StrictMode. findDOMNode was passed an instance of Draggable which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node
+    at div
+    at DraggableCore (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-draggable.js?v=a4f86fdb:1360:9)
+    at Draggable (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-draggable.js?v=a4f86fdb:1792:9)
+    at Home (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/src/screens/home/index.tsx?t=1756987588377:26:21)
+    at RenderedRoute (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=3da31700:4034:5)
+    at RenderErrorBoundary (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=3da31700:3994:5)
+    at DataRoutes (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=3da31700:5153:5)
+    at Router (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=3da31700:4416:15)
+    at RouterProvider (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=3da31700:4968:5)
+    at MantineThemeProvider (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/@mantine_core.js?v=1caedbc2:3114:3)
+    at MantineProvider (https://d5154a7d-c104-425b-ac8f-99b54549f969-00-2rko42r9g3qqv.sisko.replit.dev/node_modules/.vite/deps/@mantine_core.js?v=1caedbc2:3613:3)
+    at App
